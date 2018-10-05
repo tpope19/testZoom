@@ -12,8 +12,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
+
     
     override func viewDidLoad() {
+        scrollView.contentSize = CGSize(width: 1600, height: 900)
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 5.0
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return image
     }
+    
 
 }
 
