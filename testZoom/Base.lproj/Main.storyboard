@@ -21,9 +21,12 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdm-NT-8Uw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RC_Map" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-Hf-hXt">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RC_Map" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-Hf-hXt" userLabel="image">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qpZ-oA-qmw" appends="YES" id="0Dp-fU-QM4"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
@@ -56,6 +59,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qpZ-oA-qmw">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="Wr9-2c-n19"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-98.400000000000006" y="118.29085457271366"/>
         </scene>
